@@ -1,4 +1,7 @@
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op
 module.exports = {
+
     port: 8081,
     db: {
 
@@ -9,7 +12,7 @@ module.exports = {
             dialect: process.env.DIALECT || 'sqlite',
             host: process.env.HOST || 'localhost',
             storage: './tabtracker.sqlite',
-            operatorsAliases: false
+            operatorsAliases: Op
         }
     }
 }
